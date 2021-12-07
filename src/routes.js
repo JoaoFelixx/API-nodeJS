@@ -8,13 +8,13 @@ const {
   deleteArticleController,
 } = require('./useCases');
 
-router.get('/article/', getAllArticleController);
-router.get('/article/:id',getOneArticleController);
+router.get('/articles/', getAllArticleController);
+router.get('/articles/:id',getOneArticleController);
 
-router.post('/article/', createArticleController);
+router.post('/articles/', createArticleController);
 
-router.put('/article/:id', updateArticleController);
+router.put('/articles/:id', updateArticleController);
 
-router.delete('/article/:id', deleteArticleController);
+router.delete('/articles/:id', deleteArticleController);
 
 module.exports = router;
