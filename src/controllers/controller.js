@@ -1,7 +1,7 @@
 require('../models/Article');
 
 const mongoose  = require('mongoose');
-const validator = require('../auth/auth');
+const validator = require('../entities/Article');
 const Article   = mongoose.model('article');
 
 
