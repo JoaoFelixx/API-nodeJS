@@ -1,4 +1,4 @@
-const middleware_cors = require('./middleware-cores');
+const middleware_cors = require('./middleware-cors');
 
 const middleware = {
   middleware_cors,

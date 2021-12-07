@@ -12,5 +12,4 @@ const Article = new mongoose.Schema({
 
 });
 
-
 mongoose.model('article', Article); 

@@ -13,7 +13,7 @@ const hasError = ({ title, content }) => {
 	return false;
 }
 
-const createArticleController = (request, response) => {
+const createArticleController = async (request, response) => {
 	const { title, content } = request.body;
 
 	const error = hasError({ title, content }); 

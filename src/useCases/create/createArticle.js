@@ -1,7 +1,7 @@
 require('../../models/Article');
 
-const mongoose  = require('mongoose');
-const Article   = mongoose.model('article');
+const mongoose = require('mongoose');
+const Article  = mongoose.model('article');
 
 exports.createArticle = async ({ title, content }) => {
   try {  

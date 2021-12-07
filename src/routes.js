@@ -1,16 +1,20 @@
-const controller = require('./controllers/controller');
-const express    = require('express');
-const router     = express.Router()
-const useCases   = require('./useCases');
+const { Router } = require('express');
+const router  = Router()
+const {
+  getAllArticleController,
+  getOneArticleController,
+  createArticleController,
+  updateArticleController,
+  deleteArticleController,
+} = require('./useCases');
 
-router.get('/',              		controller.index);
-router.get('/list-articles', 		controller.listArticles);
-router.get('/article/view/:id', controller.viewArticle);
+router.get('/article/', getAllArticleController);
+router.get('/article/:id',getOneArticleController);
 
-router.put('/article/edit/:id', controller.editArticle);
+router.post('/article/', createArticleController);
 
-router.delete('/article/delete/:id', controller.deleteArticle);
+router.put('/article/:id', updateArticleController);
 
-router.post('/register', controller.registerArticle);
+router.delete('/article/:id', deleteArticleController);
 
 module.exports = router;

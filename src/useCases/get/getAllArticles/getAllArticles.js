@@ -1,12 +1,12 @@
-require('../../models/Article');
+require('../../../models/Article');
 
 const mongoose  = require('mongoose');
 const Article   = mongoose.model('article');
 
-exports.deleteArticle = async (_id) => {
+exports.getAllArticles = async () => {
   try {
-    return await Article.deleteOne({ _id });
-    
+    return await Article.find();
+
   } catch (err) {
     throw new Error(err)
   }
