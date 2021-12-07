@@ -4,10 +4,7 @@ const getAllArticlesController = async (request, response) => {
   try {
     const allArticles = await getAllArticles();
 
-    if (!allArticles) return res.status(400).json({
-			error:    true,
-			message: 'nenhum artigo cadastrado'
-		});
+    if (allArticles.length === 0) return response.sendStatus(404);
   
     return response.status(200).json(allArticles);
     
